@@ -308,27 +308,6 @@
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $("button").click(function (e) {
-                e.preventDefault();
-                $.ajax({
-                    type: "get",
-                    url: "api/collections",
-
-                    success: function (result) {
-                        alert('ok');
-                        console.log(result);
-                    },
-                    error: function (result) {
-                        alert('error');
-                    }
-                });
-            });
-
-        })
-    </script>
-
 </body>
 
 </html>
