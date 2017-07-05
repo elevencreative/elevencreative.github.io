@@ -53,8 +53,8 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                            
+                        <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
                             <!--<li role="separator" class="divider"></li>-->
                             <li><a href="portraits.html">Portraits</a></li>
                             <li><a href="#">Newborns</a></li>
@@ -79,7 +79,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading"  style="text-shadow:1px 1px #0a0a0a !important;">Eleven Creative</h1>
+                <h1 id="homeHeading" style="text-shadow:1px 1px #0a0a0a !important;">Eleven Creative</h1>
                 <hr>
                 <!--<p>WE ARE A HUSBAND AND WIFE CREATIVE TEAM BASED IN MID-MICHIGAN SPECIALIZING IN PHOTOGRAPHY</p>-->
                 <p><img src="img/michigan.gif" width=100></p>
@@ -307,6 +307,23 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('li.dropdown a').on('click', function (event) {
+                $(this).parent().toggleClass('open');                
+            });
+
+            $('body').on('click', function (e) {
+                if (!$('li.dropdown').is(e.target)
+                    && $('li.dropdown').has(e.target).length === 0
+                    && $('.open').has(e.target).length === 0
+                ) {
+                    $('li.dropdown').removeClass('open');
+                }
+            });
+        })
+    </script>
+
 
 </body>
 
