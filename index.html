@@ -1,329 +1,874 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 
 <head>
-
+    <!-- Basic Page Needs
+    ================================================== -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Husband and wife photography team located in Michigan">
+    <title>Eleven Creative</title>
+    <meta name="description" content="Husband and wife creative team located in Mid-Michigan">
+    <meta name="keywords" content="photography, web development, web sites, application development, software">
     <meta name="author" content="Eleven Creative">
 
-    <title>Eleven Creative</title>
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsiveness.css">
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-        rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
-        rel='stylesheet' type='text/css'>
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/creative.css" rel="stylesheet">
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
-<body id="page-top">
+<body style="overflow: visible;">
+    <!-- Preloader
+    ================================================== -->
+    <div id="preloader" style="display: none;">
+        <div id="status" style="display: none;">&nbsp;</div>
+    </div>
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+    <!-- Navigation
+    ================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Eleven Creative</a>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>              
+          </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>
+                <!-- Your logo here-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-
-                    <!--<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-
-                            
-                        </ul>
-                    </li>
-                    <li>-->
-                        <li><a href="portraits.html">Portraits</a></li>
-                            <li><a href="#">Newborns</a></li>
-                            <li><a href="#">Product & Business</a></li>
-                            <li><a href="#">Senior</a></li>
-                            <li><a href="#">Family</a></li>
-                        <li><a class="page-scroll" href="#about">About</a></li>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    <li class="active"><a class="page-scroll" href="#banner">Home</a></li>
+                    <li><a class="page-scroll" href="#vision">Vision</a></li>
+                    <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#footer">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- End navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- End container -->
     </nav>
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading" style="text-shadow:1px 1px #0a0a0a !important;">Eleven Creative</h1>
-                <hr>
-                <!--<p>WE ARE A HUSBAND AND WIFE CREATIVE TEAM BASED IN MID-MICHIGAN SPECIALIZING IN PHOTOGRAPHY</p>-->
-                <p><img src="img/michigan.gif" width=100></p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">About Us</a>
+    <!-- Header/Homepage
+    ================================================== -->
+    <header id="banner" class="carousel slide zoom carousel-fade" data-ride="carousel">
+
+        <div class="carousel-inner">
+            <!-- Inner wrapper for slides -->
+            <div class="item">
+                <!-- First item slider -->
+                <img src="img/banners/01_bg.jpg" alt="banner-img">
+                <!-- First item background image slider -->
+                <div class="carousel-caption overlay">
+                    <div class="content">
+                        <div class="text wow bounceIn animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;">
+                            <h1>Eleven Creativee</h1>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- End first item background image slider -->
             </div>
+            <!-- End first item slider -->
+
+            <div class="item">
+                <!-- Second item slider -->
+                <img src="img/banners/02_bg.jpg" alt="banner-img">
+                <!-- Second item background image slider -->
+                <div class="carousel-caption">
+                    <div class="content">
+                        <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h1>Portraits</h1>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- End second item background image slider -->
+            </div>
+            <!-- End second item slider -->
+
+            <div class="item">
+                <!-- Third item slider -->
+                <img src="img/banners/03_bg.jpg" alt="banner-img">
+                <!-- Third item background image slider -->
+                <div class="carousel-caption">
+                    <div class="content">
+                        <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h1>Weddings</h1>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- End third item background image slider -->
+            </div>
+            <!-- End third item slider -->
+
+            <div class="item">
+                <!-- Fourth item slider -->
+                <img src="img/banners/04_bg.jpg" alt="banner-img">
+                <!-- Fourth item background image slider -->
+                <div class="carousel-caption">
+                    <div class="content">
+                        <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h1>Family</h1>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- End fourth item background image slider -->
+            </div>
+            <!-- End fourth item slider -->
+
+            <div class="item active">
+                <!-- Fifth item slider -->
+                <img src="img/banners/05_bg.jpg" alt="banner-img">
+                <!-- Fifth item background image slider -->
+                <div class="carousel-caption">
+                    <div class="content">
+                        <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h1>All About Photography</h1>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- End fifth item background image slider -->
+            </div>
+            <!-- End fifth item slider -->
         </div>
+        <!-- End inner wrapper for slides -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
+            <img src="img/06_left.png" alt="prev-img">
+            <!-- Left controls -->
+        </a>
+        <a class="right carousel-control" href="#banner" role="button" data-slide="next">
+            <img src="img/05_right.png" alt="next-img">
+            <!-- Right controls -->
+        </a>
     </header>
 
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Husband and Wife Creative Team</h2>
-                    <hr class="light">
-                    <p class="text-faded">
-                        We are a husband and wife creative team based in mid-Michigan specializing in photography. Although we have drastically different
-                        backgrounds (graphic design vs. computer science), we both can at least agree on a passion for photography.
-                        We’re both constantly seeking new challenges, which is what keeps things fun. We love photographing
-                        portraits, places, products, families, sports, and pretty much anything else we can point our cameras
-                        at.
-                    </p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+
+    <!-- Vision/Mission 
+    ================================================== -->
+    <section id="vision">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="dark-overlay vision">
+                        <div class="vision-border centered wow bounceIn" style="visibility: hidden; animation-name: none;">
+                            <h4>Design To Showcase</h4>
+                            <h2>Photography</h2>
+                            <h6>The need to capture the moment and freeze it for life.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="dark-overlay vision">
+                        <div class="vision-border centered wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h4>Capture The Moment</h4>
+                            <h2>Photography</h2>
+                            <h6>Quality photography that preserves treasured memories.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="dark-overlay vision">
+                        <div class="vision-border centered wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                            <h4>Still-life Images</h4>
+                            <h2>Photography</h2>
+                            <h6>Take alot of photos not war.</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+        </div>
+        <!-- Portfolio Title -->
+        <div class="light-overlay ptitle">
+            <h2>Just Cool Things</h2>
+            <h5>Recent pictures I’ve taken. Check them out!</h5>
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/images/1.jpg" class="portfolio-box">
-                        <img src="img/images/1.jpg" class="img-responsive" alt="">
+    <!-- Portfolio Section
+    ================================================== -->
+    <section id="portfolio" class="grid">
 
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+            <!-- Portfolio 1 -->
+            <img src="img/blog/01.jpg" alt="01_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Youtube</h2>
+                <p>This is a Modal with Youtube video embeded in the portfolio.</p>
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">View more</a>
+                <!-- Larger image popup -->
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 1 -->
 
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Portraits
-                                </div>
-                                <div class="project-name">
-                                    <!--Project Name-->
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="2s" style="visibility: hidden; animation-duration: 2s; animation-name: none;">
+            <!-- Portfolio 2 -->
+            <img src="img/blog/02.jpg" alt="02_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Slider</h2>
+                <p>This is a Modal with carousel or image slider in the portfolio.</p>
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">View more</a>
+                <!-- Larger image popup -->
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 2 -->
 
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s" style="visibility: hidden; animation-duration: 3s; animation-name: none;">
+            <!-- Portfolio 3 -->
+            <img src="img/blog/03.jpg" alt="03_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Image</h2>
+                <p>This modal featured a single image only.</p>
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 3 -->
 
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="4s" style="visibility: hidden; animation-duration: 4s; animation-name: none;">
+            <!-- Portfolio 4 -->
+            <img src="img/blog/04.jpg" alt="04_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Rushing</h2>
+                <p>The great fun in my life has been getting up every morning and rushing to the typewriter because some new
+                    idea has hit me.</p>
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 4 -->
 
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/newborn/1.jpg" class="portfolio-box">
-                        <img src="img/newborn/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Newborns
-                                </div>
-                                <div class="project-name">
-                                    <!--Project Name-->
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="5s" style="visibility: hidden; animation-duration: 5s; animation-name: none;">
+            <!-- Portfolio 5 -->
+            <img src="img/blog/05.jpg" alt="05_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Mountains</h2>
+                <p>Look deep into nature, and then you will understand everything better.</p>
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 5 -->
 
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/images/13.jpg" class="portfolio-box">
-                        <img src="img/images/13.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Product/Promotional
-                                </div>
-                                <div class="project-name">
-                                    <!--Project Name-->
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!--<div data-bind="foreach: products">
-                        <a data-bind="attr: {href: 'img/portfolio/fullsize/Product-Promotional/' + $index() + '.jpg'}">
-                            <img data-bind="attr: {src: 'img/portfolio/fullsize/Product-Promotional/' + $index() + '.jpg'}" class="img-responsive" alt="" style="display:none;">
-                        </a>
-                    </div>-->
-                </div>
-                <!--<div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/fullsize/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Product Photography
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>-->
-                <!--<div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/fullsize/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>-->
-                <!--<div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/fullsize/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>-->
-            </div>
-        </div>
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="6s" style="visibility: hidden; animation-duration: 6s; animation-name: none;">
+            <!-- Portfolio 6 -->
+            <img src="img/blog/06.jpg" alt="06_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Flowing</h2>
+                <p>The work an unknown good man has done is like a vein of water flowing hidden underground, secretly making
+                    the ground green.</p>
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 6 -->
+
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="1s" style="visibility: hidden; animation-duration: 1s; animation-name: none;">
+            <!-- Portfolio 7 -->
+            <img src="img/blog/07.jpg" alt="07_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Cliff</h2>
+                <p>The greatest risk is really to take no risk at all. You ve got to go out there, jump off the cliff, and take
+                    chances.</p>
+                <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 7 -->
+
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="2s" style="visibility: hidden; animation-duration: 2s; animation-name: none;">
+            <!-- Portfolio 8 -->
+            <img src="img/blog/08.jpg" alt="08_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Getaway</h2>
+                <p>He who does not get fun and enjoyment out of every day, needs to reorganize his life. </p>
+                <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 8 -->
+
+        <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s" style="visibility: hidden; animation-duration: 3s; animation-name: none;">
+            <!-- Portfolio 9 -->
+            <img src="img/blog/09.jpg" alt="09_img">
+            <!-- Your image here -->
+            <figcaption>
+                <!-- Caption -->
+                <h2>Serenity</h2>
+                <p>God grant me the serenity to accept the things I cannot change, the courage to change the things I can, and
+                    the wisdom to know the difference.</p>
+                <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">View more</a>
+            </figcaption>
+            <!-- End caption -->
+        </figure>
+        <!-- End portfolio 9 -->
+
     </section>
+    <!-- End Portfolio Section -->
 
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
 
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-user text-primary sr-icons"></i>
-                        <h3>Headshots</h3>
-                        <p class="text-muted">Spruce up your resume/professional presence with a crisp headshot/portrait</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-shopping-cart text-primary sr-icons"></i>
-                        <h3>Product Photography</h3>
-                        <p class="text-muted">Get pictures of your business because pictures is good</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-users text-primary sr-icons"></i>
-                        <h3>Senior Portraits</h3>
-                        <p class="text-muted">Another turning point, a fork stuck in the road</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Newborn/children</h3>
-                        <p class="text-muted">50% off with deposit on senior photo session</p>
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <aside class="bg-dark" id="contact">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2 class="section-heading">We'd Love to Hear From You!</h2>
-                <hr class="primary">
-                <p>Ready to book a session? That's great! Send us an email and we will get back to you as soon as possible!</p>
-                <a href="mailto:elevencreativemi@gmail.com"><i class="fa fa-envelope-o fa-3x sr-contact"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Youtube Video</h2>
+                            <div class="videoWrapper">
+                            </div>
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </aside>
+    </div>
 
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Slider Image</h2>
 
-    <!--<section id="contact">
+                            <div id="slider" class="carousel slide" data-ride="carousel">
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="img/blog/02.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/03.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/04.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/05.jpg" alt="...">
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                                    <span class="fa fa-caret-left fa-2x"></span>
+                                </a>
+                                <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                                    <span class="fa fa-caret-right fa-2x"></span>
+                                </a>
+                            </div>
+
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Image Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Single Image</h2>
+                            <img class="img-responsive" src="img/blog/03.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Paris</h2>
+                            <img class="img-responsive" src="img/blog/04.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Mountains</h2>
+                            <div id="slider2" class="carousel slide" data-ride="carousel">
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="img/blog/05.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/06.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/07.jpg" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/blog/08.jpg" alt="...">
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#slider2" role="button" data-slide="prev">
+                                    <span class="fa fa-caret-left fa-2x"></span>
+                                </a>
+                                <a class="right carousel-control" href="#slider2" role="button" data-slide="next">
+                                    <span class="fa fa-caret-right fa-2x"></span>
+                                </a>
+                            </div>
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Technology</h2>
+                            <img class="img-responsive" src="img/blog/06.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Freedom</h2>
+                            <img class="img-responsive" src="img/blog/07.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Freedom</h2>
+                            <img class="img-responsive" src="img/blog/08.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p>
+                                <strong>Want these theme for your portfolio?</strong> You can download 60 of them for free,
+                                courtesy of jlpmedia.com, or you can purchase the 1500 icon set <a href="#">here</a>.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Freedom</h2>
+                            <img class="img-responsive" src="img/blog/09.jpg" alt="Image">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                                officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p><strong>Want these theme for your portfolio?</strong> You can download this theme here for only
+                                $10, courtesy of jlpmedia.com. Awesome Photography/Portfolio Template is a bootstrap based
+                                awesome photography portfolio template. Creatively designed to present your artwork beautifully
+                                and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio
+                                Template to showcase your photography and crafts. This is mobile responsive template, very
+                                easy to use and well-documented codes.</p>
+                            <ul class="list-inline">
+                                <li>Date: August 2014</li>
+                                <li>Client: Tarsier Graphics</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<section id="subscribe">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We'd Love to Hear From You!</h2>
-                    <hr class="primary">
-                    <p>Ready to book a session? That's great! Send us an email and we will get back to you as soon as possible!</p>
+                <div class="col-md-8 wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                    <p><span>For more photos and to get them weekly via email. Click to...</span></p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:elevencreativemi.com">elevencreativemi@gmail.com</a></p>
+                <div class="col-md-4 wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+                    <a class="page-scroll" href="#footer"><span class="btn right">SUBSCRIBE</span></a>
                 </div>
             </div>
         </div>
     </section>-->
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- About Section
+    ================================================== -->
+    <section id="about">
+        <!-- Start about -->
+        <div class="about-content wow fadeIn" data-wow-delay="2s" style="visibility: hidden; animation-delay: 2s; animation-name: none;">
+            <div class="container">
+                <!-- Container -->
+                <h2>Lian Plameras</h2>
+                <!-- Your name or agency name here -->
+                <div class="about-text">
+                    <p class="large">NY, New York</p>
+                    <!-- Your address -->
+                    <p class="small">www.awesomephotography.com</p>
+                    <!-- Your website -->
+                    <br>
+                    <p class="large">I love. Music. Dogs. Biking. Coffee.</p>
+                    <!-- Tell more about you -->
+                    <p class="atext">Velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+                        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+                        facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                        exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+                        eum iriure dolor in hendrerit in. vulputate.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- End about -->
+
+    <!-- Footer Section
+    ================================================== -->
+    <!--<section id="footer">
+      <div class="container">
+        <a href="#"><img src="img/07_footer-logo.png" alt="footer-logo"></a>
+        <br>
+        <br>        
+        <a id="show" class="btn wow bounceIn" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;"><h2>Work with Us!</h2></a>
+        <br>
+    </div>
+    </section>-->
+
+    <!-- Toggle Contact Section
+    ================================================== -->
+    <!--<section id="contact">
+      <div class="container">
+
+
+      </div>
+    </section>-->
+
+    <!-- Social Media Section
+    ================================================== -->
+    <section id="socials">
+        <div class="container wow bounceIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+            <p><span class="follow"> Follow Us! </span></p>
+            <ol class="social">
+                <li><a href="https://www.facebook.com/elevencreativemi/"><i class="fa fa-facebook fa-2x"></i></a></li>
+                <li><a href="https://www.instagram.com/elevencreativemi/"><i class="fa fa-instagram fa-2x"></i></a></li>
+            </ol>
+            <a href="mailto:elevencreativemi@gmail.com" style="Font-size:1.2em;">elevencreativemi@gmail.com</a><br>
+
+            <a href="#"  style="Font-size:1.2em;">www.elevencreativemi.com</a>
+
+        </div>
+    </section>
+
+    <div id="footer-nav">
+        <span>Eleven Creative, 2017. All Rights Reserved.</span>
+    </div>
 
 
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- jQuery / JavaScript plugins
+    ================================================== -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('li.dropdown a').on('click', function (event) {
-                $(this).parent().toggleClass('open');                
-            });
+    <script src="js/wow.min.js"></script>
+    <!-- Content Animation -->
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <!-- Smooth scrolling page-->
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/cbpAnimatedHeader.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
 
-            $('body').on('click', function (e) {
-                if (!$('li.dropdown').is(e.target)
-                    && $('li.dropdown').has(e.target).length === 0
-                    && $('.open').has(e.target).length === 0
-                ) {
-                    $('li.dropdown').removeClass('open');
-                }
-            });
-        })
-    </script>
+    <!-- Parallax Effects-->
+    <script src="js/skrollr.js"></script>
+    <script src="js/imagesloaded.js"></script>
+
+    <!-- Contact page-->
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+
+    <!-- My Custom Plugin JavaScript -->
+    <script type="text/javascript" src="js/main.js"></script>
 
 
 </body>
