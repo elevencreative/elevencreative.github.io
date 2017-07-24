@@ -9,3 +9,10 @@
 .navbar-shrink > .container > .navbar-header > .navbar-brand > img {
     width:80px;
 }
+
+.modal-image {
+    max-width:100%;
+    display:block;
+    max-height:750px !important;
+    margin:auto;
+}
